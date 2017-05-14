@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Display7SEG
+#
+DEF Display7SEG U 0 40 Y Y 1 F N
+F0 "U" 550 450 60 H V C CNN
+F1 "Display7SEG" 150 450 60 H V C CNN
+F2 "" 550 450 60 H I C CNN
+F3 "" 550 450 60 H I C CNN
+DRAW
+T 0 -200 200 60 0 0 0 a Normal 0 C C
+T 0 -200 100 60 0 0 0 b Normal 0 C C
+T 0 -200 0 60 0 0 0 c Normal 0 C C
+T 0 -200 -100 60 0 0 0 d Normal 0 C C
+T 0 -200 -200 60 0 0 0 e Normal 0 C C
+T 0 -200 -300 60 0 0 0 f Normal 0 C C
+T 0 -200 -400 60 0 0 0 g Normal 0 C C
+T 0 -150 -650 60 0 0 0 Vcc Normal 0 C C
+P 2 0 0 39 0 -700 500 -700 N
+P 2 0 0 39 50 -250 0 -700 N
+P 2 0 0 39 550 -250 500 -700 N
+P 5 0 0 39 600 200 100 200 50 -250 550 -250 600 200 N
+S 700 -850 -250 350 0 1 0 f
+X ~ ~ -450 -650 200 R 50 50 1 1 B
+X ~ ~ -450 -400 200 R 50 50 1 1 B
+X ~ ~ -450 -300 200 R 50 50 1 1 B
+X ~ ~ -450 -200 200 R 50 50 1 1 B
+X ~ ~ -450 -100 200 R 50 50 1 1 B
+X ~ ~ -450 0 200 R 50 50 1 1 B
+X ~ ~ -450 100 200 R 50 50 1 1 B
+X ~ ~ -450 200 200 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+#End Library
