@@ -1,0 +1,14 @@
+Plantilla ITM debug
+-------------------
+Para el curso ARM Cortex-M de http://armpower.blogs.upv.es/
+
+Características:
+- Depuración SWV/ITM preparada para printf() al servicio de depuración
+http://armcortexm.blogs.upv.es/stm32f4-discovery-and-printf-redirection-to-debug-viewer-in-keil/
+- Preconfigurado para las rutas de la STM32F4-Discovery_FW_V1.1.0 cque se debe colocar ../terceros
+- Nivel de optimización 0 para facuilitar la depuración.
+- Coprocesador matemático hardware activado.
+
+Instrucciones
+-Descomprimir en el directorio raíz de actividades del curso
+-Abrir con Keil uVision el archivo ./plantilla_ITM_debug/plantilla_ITM_debug.uvproj

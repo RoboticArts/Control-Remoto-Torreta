@@ -1,0 +1,1656 @@
+Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
+
+==============================================================================
+
+Section Cross References
+
+    .\output\system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to .\output\system_stm32f4xx.o(.data) for SystemCoreClock
+    .\output\system_stm32f4xx.o(i.SystemInit) refers to .\output\system_stm32f4xx.o(i.SetSysClock) for SetSysClock
+    .\output\main.o(i.Delayms) refers to .\output\tm_stm32f4_delay.o(.data) for TM_Time
+    .\output\main.o(i.ShowDisplay) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Write) for GPIO_Write
+    .\output\main.o(i.ShowDisplay) refers to .\output\stm32f4xx_gpio.o(i.GPIO_ReadOutputData) for GPIO_ReadOutputData
+    .\output\main.o(i.ShowDisplay) refers to .\output\binario.o(i.binario) for binario
+    .\output\main.o(i.ShowDisplay) refers to .\output\main.o(.data) for PuertoE
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_PinAFConfig) for GPIO_PinAFConfig
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_usart.o(i.USART_Init) for USART_Init
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_usart.o(i.USART_ITConfig) for USART_ITConfig
+    .\output\main.o(i.USART3_Init) refers to .\output\misc.o(i.NVIC_Init) for NVIC_Init
+    .\output\main.o(i.USART3_Init) refers to .\output\stm32f4xx_usart.o(i.USART_Cmd) for USART_Cmd
+    .\output\main.o(i.USART_SendString) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o)(.text) for strlen
+    .\output\main.o(i.USART_SendString) refers to .\output\stm32f4xx_usart.o(i.USART_SendData) for USART_SendData
+    .\output\main.o(i.USART_SendString) refers to .\output\main.o(i.Delayms) for Delayms
+    .\output\main.o(i.buttons_init) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\main.o(i.buttons_init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\main.o(i.display_init) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\main.o(i.display_init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\main.o(i.display_init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_ReadOutputData) for GPIO_ReadOutputData
+    .\output\main.o(i.display_init) refers to .\output\main.o(.data) for PuertoE
+    .\output\main.o(i.leds_init) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\main.o(i.leds_init) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\main.o(i.main) refers to .\output\main.o(i.leds_init) for leds_init
+    .\output\main.o(i.main) refers to .\output\main.o(i.display_init) for display_init
+    .\output\main.o(i.main) refers to .\output\main.o(i.USART3_Init) for USART3_Init
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) for TM_LIS302DL_LIS3DSH_Init
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) for TM_HD44780_Init
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) for TM_ADC_Init
+    .\output\main.o(i.main) refers to .\output\main.o(i.buttons_init) for buttons_init
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear) for TM_HD44780_Clear
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes) for TM_LIS302DL_LIS3DSH_ReadAxes
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_Read) for TM_ADC_Read
+    .\output\main.o(i.main) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)(.text) for __aeabi_i2d
+    .\output\main.o(i.main) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text) for __aeabi_dmul
+    .\output\main.o(i.main) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)(.text) for __aeabi_d2iz
+    .\output\main.o(i.main) refers to .\output\main.o(i.map) for map
+    .\output\main.o(i.main) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Write) for GPIO_Write
+    .\output\main.o(i.main) refers to .\output\main.o(i.ShowDisplay) for ShowDisplay
+    .\output\main.o(i.main) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1) for __2sprintf
+    .\output\main.o(i.main) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts) for TM_HD44780_Puts
+    .\output\main.o(i.main) refers to .\output\main.o(i.shoot_button) for shoot_button
+    .\output\main.o(i.main) refers to .\output\main.o(i.stabilizer_button) for stabilizer_button
+    .\output\main.o(i.main) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o)(.text) for strcat
+    .\output\main.o(i.main) refers to .\output\main.o(i.USART_SendString) for USART_SendString
+    .\output\main.o(i.main) refers to .\output\main.o(i.Delayms) for Delayms
+    .\output\main.o(i.main) refers to .\output\main.o(.data) for LED
+    .\output\main.o(i.main) refers to .\output\main.o(.bss) for axesX
+    .\output\main.o(i.shoot_button) refers to .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    .\output\main.o(i.stabilizer_button) refers to .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDInit) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDInit) refers to .\output\stm32f4_discovery.o(.constdata) for GPIO_CLK
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDInit) refers to .\output\stm32f4_discovery.o(.data) for GPIO_PORT
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOff) refers to .\output\stm32f4_discovery.o(.constdata) for GPIO_PIN
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOff) refers to .\output\stm32f4_discovery.o(.data) for GPIO_PORT
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOn) refers to .\output\stm32f4_discovery.o(.constdata) for GPIO_PIN
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOn) refers to .\output\stm32f4_discovery.o(.data) for GPIO_PORT
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDToggle) refers to .\output\stm32f4_discovery.o(.data) for GPIO_PORT
+    .\output\stm32f4_discovery.o(i.STM_EVAL_LEDToggle) refers to .\output\stm32f4_discovery.o(.constdata) for GPIO_PIN
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBGetState) refers to .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBGetState) refers to .\output\stm32f4_discovery.o(.constdata) for BUTTON_PIN
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBGetState) refers to .\output\stm32f4_discovery.o(.data) for BUTTON_PORT
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4xx_syscfg.o(i.SYSCFG_EXTILineConfig) for SYSCFG_EXTILineConfig
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4xx_exti.o(i.EXTI_Init) for EXTI_Init
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\misc.o(i.NVIC_Init) for NVIC_Init
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4_discovery.o(.constdata) for BUTTON_CLK
+    .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit) refers to .\output\stm32f4_discovery.o(.data) for BUTTON_PORT
+    .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq) refers to .\output\stm32f4xx_rcc.o(.data) for APBAHBPrescTable
+    .\output\stm32f4xx_rcc.o(i.RCC_WaitForHSEStartUp) refers to .\output\stm32f4xx_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    .\output\stm32f4xx_gpio.o(i.GPIO_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphResetCmd) for RCC_AHB1PeriphResetCmd
+    .\output\stm32f4xx_syscfg.o(i.SYSCFG_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    .\output\stm32f4xx_usart.o(i.USART_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    .\output\stm32f4xx_usart.o(i.USART_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    .\output\stm32f4xx_usart.o(i.USART_Init) refers to .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\startup_stm32f4xx.o(STACK) for __initial_sp
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\startup_stm32f4xx.o(.text) for Reset_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.NMI_Handler) for NMI_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.HardFault_Handler) for HardFault_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.MemManage_Handler) for MemManage_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.BusFault_Handler) for BusFault_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.SVC_Handler) for SVC_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\stm32f4xx_it.o(i.PendSV_Handler) for PendSV_Handler
+    .\output\startup_stm32f4xx.o(RESET) refers to .\output\tm_stm32f4_delay.o(i.SysTick_Handler) for SysTick_Handler
+    .\output\startup_stm32f4xx.o(.text) refers to .\output\system_stm32f4xx.o(i.SystemInit) for SystemInit
+    .\output\startup_stm32f4xx.o(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) for __main
+    .\output\binario.o(i.binario) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1) for __2printf
+    .\output\binario.o(i.binario) refers to .\output\binario.o(.data) for nr
+    .\output\tm_stm32f4_hd44780.o(i.Delay) refers to .\output\tm_stm32f4_delay.o(.data) for mult
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOff) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOff) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOn) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOn) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear) refers to .\output\tm_stm32f4_hd44780.o(i.Delay) for Delay
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit) for TM_HD44780_Cmd4bit
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit) refers to .\output\tm_stm32f4_hd44780.o(i.Delay) for Delay
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CreateChar) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CreateChar) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data) for TM_HD44780_Data
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOff) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOff) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOn) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOn) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit) for TM_HD44780_Cmd4bit
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOff) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOff) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOn) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOn) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_delay.o(i.TM_DELAY_Init) for TM_DELAY_Init
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_InitPins) for TM_HD44780_InitPins
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.Delay) for Delay
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit) for TM_HD44780_Cmd4bit
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOn) for TM_HD44780_DisplayOn
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear) for TM_HD44780_Clear
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_InitPins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init) for TM_GPIO_Init
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_PutCustom) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet) for TM_HD44780_CursorSet
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_PutCustom) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data) for TM_HD44780_Data
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet) for TM_HD44780_CursorSet
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data) for TM_HD44780_Data
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts) refers to .\output\tm_stm32f4_hd44780.o(.data) for HD44780_Opts
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_ScrollLeft) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_ScrollRight) refers to .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd) for TM_HD44780_Cmd
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_DeInit) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_DeInit) refers to .\output\tm_stm32f4_gpio.o(.bss) for GPIO_UsedPins
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetFreePins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetFreePins) refers to .\output\tm_stm32f4_gpio.o(.bss) for GPIO_UsedPins
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetUsedPins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetUsedPins) refers to .\output\tm_stm32f4_gpio.o(.bss) for GPIO_UsedPins
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_DisableClock) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_EnableClock) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource) for TM_GPIO_GetPortSource
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init) refers to .\output\tm_stm32f4_gpio.o(.bss) for GPIO_UsedPins
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_EnableClock) for TM_GPIO_INT_EnableClock
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init) for TM_GPIO_INT_Init
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_EnableClock) for TM_GPIO_INT_EnableClock
+    .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init) for TM_GPIO_INT_Init
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_DisableClock) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_DisableClock) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_EnableClock) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_EnableClock) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GenerateDataForWorkingFrequency) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfltui.o)(.text) for __aeabi_ui2d
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GenerateDataForWorkingFrequency) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdcmple.o)(.text) for __aeabi_cdcmple
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GenerateDataForWorkingFrequency) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o)(.text) for __aeabi_ddiv
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GenerateDataForWorkingFrequency) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixui.o)(.text) for __aeabi_d2uiz
+    .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GetTimerProperties) refers to .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    .\output\tm_stm32f4_delay.o(i.SysTick_Handler) refers to .\output\tm_stm32f4_delay.o(.data) for TM_Time
+    .\output\tm_stm32f4_delay.o(i.SysTick_Handler) refers to .\output\tm_stm32f4_delay.o(.bss) for CustomTimers
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_EnableDelayTimer) refers to .\output\tm_stm32f4_delay.o(.data) for TM_DELAY_Initialized
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_Init) refers to .\output\system_stm32f4xx.o(.data) for SystemCoreClock
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_Init) refers to .\output\tm_stm32f4_delay.o(.data) for mult
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerCreate) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.malloc) for malloc
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerCreate) refers to .\output\tm_stm32f4_delay.o(.bss) for CustomTimers
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerDelete) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.free) for free
+    .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerDelete) refers to .\output\tm_stm32f4_delay.o(.bss) for CustomTimers
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_0_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_10_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_11_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_12_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_13_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_14_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_15_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_1_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_2_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_3_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_4_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_5_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_6_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_7_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_8_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_9_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) for TM_ADC_INT_InitPin
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init) for TM_GPIO_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_0_Init) for TM_ADC_INT_Channel_0_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_1_Init) for TM_ADC_INT_Channel_1_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_2_Init) for TM_ADC_INT_Channel_2_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_3_Init) for TM_ADC_INT_Channel_3_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_4_Init) for TM_ADC_INT_Channel_4_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_5_Init) for TM_ADC_INT_Channel_5_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_6_Init) for TM_ADC_INT_Channel_6_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_7_Init) for TM_ADC_INT_Channel_7_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_8_Init) for TM_ADC_INT_Channel_8_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_9_Init) for TM_ADC_INT_Channel_9_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_10_Init) for TM_ADC_INT_Channel_10_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_11_Init) for TM_ADC_INT_Channel_11_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_12_Init) for TM_ADC_INT_Channel_12_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_13_Init) for TM_ADC_INT_Channel_13_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_14_Init) for TM_ADC_INT_Channel_14_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_15_Init) for TM_ADC_INT_Channel_15_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Init) refers to .\output\tm_stm32f4_adc.o(i.TM_ADC_InitADC) for TM_ADC_InitADC
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_InitADC) refers to .\output\stm32f4xx_adc.o(i.ADC_CommonInit) for ADC_CommonInit
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_InitADC) refers to .\output\stm32f4xx_adc.o(i.ADC_Init) for ADC_Init
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_Read) refers to .\output\stm32f4xx_adc.o(i.ADC_RegularChannelConfig) for ADC_RegularChannelConfig
+    .\output\tm_stm32f4_adc.o(i.TM_ADC_ReadVbat) refers to .\output\stm32f4xx_adc.o(i.ADC_RegularChannelConfig) for ADC_RegularChannelConfig
+    .\output\stm32f4xx_adc.o(i.ADC_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) for TM_LIS302DL_LIS3DSH_INT_ReadSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text) for __aeabi_i2f
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)(.text) for __aeabi_fmul
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)(.text) for __aeabi_f2iz
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS3DSH_INT_Sensitivity
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_Delay) for TM_LIS302DL_LIS3DSH_INT_Delay
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) for TM_LIS302DL_LIS3DSH_INT_InitPins
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) for TM_LIS302DL_LIS3DSH_INT_ReadSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS302DL_LIS3DSH_INT_Device
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) for TM_LIS302DL_LIS3DSH_INT_ReadSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI) for TM_LIS302DL_LIS3DSH_INT_WriteSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS3DSH_INT_Sensitivity
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI) for TM_LIS302DL_LIS3DSH_INT_WriteSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS3DSH_INT_Sensitivity
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_Init) for TM_SPI_Init
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) refers to .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) refers to .\output\stm32f4xx_gpio.o(i.GPIO_Init) for GPIO_Init
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for initialized
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_SPI_Send) for TM_SPI_Send
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_ReadMulti) for TM_SPI_ReadMulti
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_SPI_Send) for TM_SPI_Send
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_WriteMulti) for TM_SPI_WriteMulti
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS302DL_LIS3DSH_INT_Device
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins) for TM_LIS302DL_LIS3DSH_INT_InitPins
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_Delay) for TM_LIS302DL_LIS3DSH_INT_Delay
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect) for TM_LIS302DL_LIS3DSH_Detect
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL) for TM_LIS302DL_LIS3DSH_INT_InitLIS302DL
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH) for TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS302DL_LIS3DSH_INT_Device
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes) for TM_LIS302DL_INT_ReadAxes
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) for TM_LIS3DSH_INT_ReadAxes
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS302DL_LIS3DSH_INT_Device
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI) for TM_LIS302DL_LIS3DSH_INT_ReadSPI
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text) for __aeabi_i2f
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)(.text) for __aeabi_fmul
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)(.text) for __aeabi_f2iz
+    .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes) refers to .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data) for TM_LIS3DSH_INT_Sensitivity
+    .\output\tm_stm32f4_spi.o(i.TM_SPI1_INT_InitPins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate) for TM_GPIO_InitAlternate
+    .\output\tm_stm32f4_spi.o(i.TM_SPI1_INT_InitPins) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_InitCustomPinsCallback) for TM_SPI_InitCustomPinsCallback
+    .\output\tm_stm32f4_spi.o(i.TM_SPI2_INT_InitPins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate) for TM_GPIO_InitAlternate
+    .\output\tm_stm32f4_spi.o(i.TM_SPI2_INT_InitPins) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_InitCustomPinsCallback) for TM_SPI_InitCustomPinsCallback
+    .\output\tm_stm32f4_spi.o(i.TM_SPI3_INT_InitPins) refers to .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate) for TM_GPIO_InitAlternate
+    .\output\tm_stm32f4_spi.o(i.TM_SPI3_INT_InitPins) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI_InitCustomPinsCallback) for TM_SPI_InitCustomPinsCallback
+    .\output\tm_stm32f4_spi.o(i.TM_SPI_GetPrescalerFromMaxFrequency) refers to .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    .\output\tm_stm32f4_spi.o(i.TM_SPI_Init) refers to .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) for TM_SPIx_Init
+    .\output\tm_stm32f4_spi.o(i.TM_SPI_InitFull) refers to .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) for TM_SPIx_Init
+    .\output\tm_stm32f4_spi.o(i.TM_SPI_InitWithMode) refers to .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) for TM_SPIx_Init
+    .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) refers to .\output\stm32f4xx_spi.o(i.SPI_StructInit) for SPI_StructInit
+    .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI1_INT_InitPins) for TM_SPI1_INT_InitPins
+    .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI2_INT_InitPins) for TM_SPI2_INT_InitPins
+    .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) refers to .\output\tm_stm32f4_spi.o(i.TM_SPI3_INT_InitPins) for TM_SPI3_INT_InitPins
+    .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init) refers to .\output\stm32f4xx_spi.o(i.SPI_Init) for SPI_Init
+    .\output\stm32f4xx_spi.o(i.SPI_I2S_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    .\output\stm32f4xx_spi.o(i.SPI_I2S_DeInit) refers to .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o)(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o)(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o)(.ARM.Collect$$$$00000008) for _main_clock
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o)(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)(.ARM.Collect$$$$0000000B) for _main_init
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004) for _main_scatterload
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00000001) for _main_stk
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0fprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0fprintf$bare) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0printf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0printf$bare) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0printf$bare) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0snprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0snprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0sprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0sprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vfprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vfprintf$bare) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vprintf$bare) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vprintf$bare) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vsnprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vsnprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vsprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i.__0vsprintf$bare) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0fprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0fprintf$0) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0printf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0printf$0) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0printf$0) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0snprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0snprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0sprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0sprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vfprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vfprintf$0) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vprintf$0) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vprintf$0) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vsnprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vsnprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vsprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i.__0vsprintf$0) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0fprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0fprintf$1) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0snprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0snprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vfprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vfprintf$1) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vprintf$1) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vprintf$1) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vsnprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vsnprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vsprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0vsprintf$1) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text) for __aeabi_uidivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0fprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0fprintf$2) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0printf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0printf$2) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0printf$2) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0snprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0snprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0sprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0sprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vfprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vfprintf$2) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vprintf$2) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vprintf$2) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vsnprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vsnprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vsprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i.__0vsprintf$2) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0fprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0fprintf$3) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0printf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0printf$3) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0printf$3) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0snprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0snprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0sprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0sprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vfprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vfprintf$3) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vprintf$3) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vprintf$3) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vsnprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vsnprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vsprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i.__0vsprintf$3) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text) for __aeabi_uidivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0fprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0fprintf$4) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0printf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0printf$4) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0printf$4) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0snprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0snprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0sprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0sprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vfprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vfprintf$4) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vprintf$4) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vprintf$4) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vsnprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vsnprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vsprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i.__0vsprintf$4) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0fprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0fprintf$5) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0printf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0printf$5) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0printf$5) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0snprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0snprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0sprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0sprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vfprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vfprintf$5) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vprintf$5) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vprintf$5) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vsnprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vsnprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vsprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i.__0vsprintf$5) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0fprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0fprintf$6) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0printf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0printf$6) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0printf$6) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0snprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0snprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0sprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0sprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vfprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vfprintf$6) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vprintf$6) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vprintf$6) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vsnprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vsnprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vsprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i.__0vsprintf$6) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_pre_padding) for _printf_pre_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text) for __aeabi_uidivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o)(i._printf_post_padding) for _printf_post_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0fprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0fprintf$7) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0printf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0printf$7) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0printf$7) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0snprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0snprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0sprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0sprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vfprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vfprintf$7) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vprintf$7) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vprintf$7) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vsnprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vsnprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vsprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i.__0vsprintf$7) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_pre_padding) for _printf_pre_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o)(i._printf_post_padding) for _printf_post_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0fprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0fprintf$8) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0printf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0printf$8) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0printf$8) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0snprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0snprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0sprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0sprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vfprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vfprintf$8) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vprintf$8) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vprintf$8) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vsnprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vsnprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vsprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i.__0vsprintf$8) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_pre_padding) for _printf_pre_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o)(i._printf_post_padding) for _printf_post_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0fprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0fprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0fprintf) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0printf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0printf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0printf) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0printf) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0snprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0snprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0snprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0sprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0sprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0sprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vfprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vfprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vfprintf) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vprintf) refers to .\output\fputc_debug.o(i.fputc) for fputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vprintf) refers to .\output\fputc_debug.o(.data) for __stdout
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsnprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsnprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsnprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._snputc) for _snputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsprintf) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) for _printf_core
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i.__0vsprintf) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._sputc) for _sputc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text) for __aeabi_dmul
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o)(.text) for __aeabi_ddiv
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdrcmple.o)(.text) for __aeabi_cdrcmple
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o)(.text) for __aeabi_dadd
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixul.o)(.text) for __aeabi_d2ulz
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_pre_padding) for _printf_pre_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) for __aeabi_uldivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_post_padding) for _printf_post_padding
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._fp_digits) for _fp_digits
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_core) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text) for __aeabi_uidivmod
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_post_padding) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._printf_pre_padding) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._snputc) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o)(i._sputc) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.free) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.malloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist_initialised
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.malloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o)(i.malloc) refers to .\output\startup_stm32f4xx.o(HEAP) for __heap_base
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__free$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.internal_alloc) for internal_alloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist_initialised
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__malloc$realloc) refers to .\output\startup_stm32f4xx.o(HEAP) for __heap_base
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.internal_alloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(memcpya.o)(.text) for __aeabi_memcpy
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.internal_alloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__free$realloc) for __free$realloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.internal_alloc) for internal_alloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.__malloc$realloc) for __malloc$realloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o)(i.realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__aligned_malloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist_initialised
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__aligned_malloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__aligned_malloc) refers to .\output\startup_stm32f4xx.o(HEAP) for __heap_base
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__free$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__malloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o)(i.__aligned_malloc) for __aligned_malloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__aligned_malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.internal_alloc) for internal_alloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__aligned_malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist_initialised
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__aligned_malloc$realloc) refers to .\output\startup_stm32f4xx.o(HEAP) for __heap_base
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__aligned_malloc$realloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__free$realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__malloc$realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__free$realloc$memalign) for __free$realloc$memalign
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.internal_alloc) for internal_alloc
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.__realloc$memalign) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.internal_alloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(memcpya.o)(.text) for __aeabi_memcpy
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o)(i.internal_alloc) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o)(.data) for __microlib_freelist
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) for _double_epilogue
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) for _double_round
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)(.text) for _float_epilogue
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) for _double_epilogue
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfltui.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfltui.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) for _double_epilogue
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text) for __aeabi_llsr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixui.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixui.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text) for __aeabi_llsr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdcmple.o)(.text) refers (Special) to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text) for __I$use$fp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00000001) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00002712) for __lit__00000000
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00002712) refers to .\output\startup_stm32f4xx.o(STACK) for __initial_sp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(__vectab_stack_and_reset_area) refers to .\output\startup_stm32f4xx.o(STACK) for __initial_sp
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(__vectab_stack_and_reset_area) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000) for __main
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)(.text) for __scatterload
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)(.ARM.Collect$$$$0000000B) refers to .\output\main.o(i.main) for main
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9b.o)(.ARM.Collect$$$$0000000C) refers to .\output\main.o(i.main) for main
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text) for __aeabi_llsr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text) for __aeabi_llsl
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text) for __aeabi_llsl
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text) for __aeabi_llsr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text) for __aeabi_llsl
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llsshr.o)(.text) for __aeabi_lasr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text) for _double_epilogue
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixul.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text) for __aeabi_llsr
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixul.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text) for __aeabi_llsl
+    C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)(.text) refers to C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing .\output\system_stm32f4xx.o(.emb_text), (8 bytes).
+    Removing .\output\system_stm32f4xx.o(i.SystemCoreClockUpdate), (192 bytes).
+    Removing .\output\main.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_it.o(.emb_text), (8 bytes).
+    Removing .\output\fputc_debug.o(.emb_text), (8 bytes).
+    Removing .\output\fputc_debug.o(i.xfputc), (36 bytes).
+    Removing .\output\stm32f4_discovery.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_LEDInit), (76 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOff), (24 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_LEDOn), (24 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_LEDToggle), (36 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_PBGetState), (32 bytes).
+    Removing .\output\stm32f4_discovery.o(i.STM_EVAL_PBInit), (168 bytes).
+    Removing .\output\stm32f4_discovery.o(.constdata), (37 bytes).
+    Removing .\output\stm32f4_discovery.o(.data), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockLPModeCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphResetCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB2PeriphClockCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB2PeriphClockLPModeCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB2PeriphResetCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB3PeriphClockCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB3PeriphClockLPModeCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AHB3PeriphResetCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockLPModeCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphResetCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphClockLPModeCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_AdjustHSICalibrationValue), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_ClearFlag), (20 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_DeInit), (72 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_GetFlagStatus), (64 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_GetITStatus), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_HCLKConfig), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_HSEConfig), (16 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_I2SCLKConfig), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_ITConfig), (32 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_LSEConfig), (44 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_LSICmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_MCO1Config), (28 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_MCO2Config), (28 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PCLK1Config), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PCLK2Config), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PLLCmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PLLConfig), (36 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PLLI2SCmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_PLLI2SConfig), (16 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_RTCCLKConfig), (60 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_SYSCLKConfig), (24 bytes).
+    Removing .\output\stm32f4xx_rcc.o(i.RCC_WaitForHSEStartUp), (56 bytes).
+    Removing .\output\misc.o(.emb_text), (8 bytes).
+    Removing .\output\misc.o(i.NVIC_PriorityGroupConfig), (20 bytes).
+    Removing .\output\misc.o(i.NVIC_SetVectorTable), (20 bytes).
+    Removing .\output\misc.o(i.NVIC_SystemLPConfig), (32 bytes).
+    Removing .\output\misc.o(i.SysTick_CLKSourceConfig), (40 bytes).
+    Removing .\output\stm32f4xx_gpio.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_DeInit), (256 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_PinLockConfig), (34 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputData), (8 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_ReadOutputDataBit), (18 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_ResetBits), (4 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_SetBits), (4 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_StructInit), (18 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_ToggleBits), (8 bytes).
+    Removing .\output\stm32f4xx_gpio.o(i.GPIO_WriteBit), (10 bytes).
+    Removing .\output\stm32f4xx_exti.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_ClearFlag), (12 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_ClearITPendingBit), (12 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_DeInit), (36 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_GenerateSWInterrupt), (16 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_GetFlagStatus), (24 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_GetITStatus), (40 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_Init), (148 bytes).
+    Removing .\output\stm32f4xx_exti.o(i.EXTI_StructInit), (16 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_CompensationCellCmd), (12 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_DeInit), (22 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_ETH_MediaInterfaceConfig), (12 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_EXTILineConfig), (64 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_GetCompensationCellStatus), (24 bytes).
+    Removing .\output\stm32f4xx_syscfg.o(i.SYSCFG_MemoryRemapConfig), (12 bytes).
+    Removing .\output\stm32f4xx_usart.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ClearFlag), (18 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ClearITPendingBit), (30 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ClockInit), (32 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ClockStructInit), (12 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_DMACmd), (18 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_DeInit), (180 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_GetFlagStatus), (26 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_GetITStatus), (84 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_HalfDuplexCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_IrDACmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_IrDAConfig), (18 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_LINBreakDetectLengthConfig), (18 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_LINCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_OneBitMethodCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_OverSampling8Cmd), (22 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ReceiveData), (10 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_ReceiverWakeUpCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SendBreak), (10 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SetAddress), (18 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SetGuardTime), (16 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SetPrescaler), (16 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SmartCardCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_SmartCardNACKCmd), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_StructInit), (24 bytes).
+    Removing .\output\stm32f4xx_usart.o(i.USART_WakeUpConfig), (18 bytes).
+    Removing .\output\startup_stm32f4xx.o(HEAP), (512 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOff), (32 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_BlinkOn), (32 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CreateChar), (40 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOff), (32 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorOn), (32 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOff), (32 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_PutCustom), (24 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_ScrollLeft), (10 bytes).
+    Removing .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_ScrollRight), (10 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_DeInit), (72 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetFreePins), (28 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPinSource), (18 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetUsedPins), (24 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_DisableClock), (32 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Lock), (16 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_SetPinAsAlternate), (50 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_SetPinAsAnalog), (38 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_SetPinAsInput), (38 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_SetPinAsOutput), (46 bytes).
+    Removing .\output\tm_stm32f4_gpio.o(i.TM_GPIO_SetPullResistor), (50 bytes).
+    Removing .\output\tm_stm32f4_timer_properties.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_DisableClock), (288 bytes).
+    Removing .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_EnableClock), (284 bytes).
+    Removing .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GenerateDataForWorkingFrequency), (240 bytes).
+    Removing .\output\tm_stm32f4_timer_properties.o(i.TM_TIMER_PROPERTIES_GetTimerProperties), (204 bytes).
+    Removing .\output\tm_stm32f4_delay.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_DisableDelayTimer), (18 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_EnableDelayTimer), (32 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerAutoReload), (4 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerAutoReloadValue), (4 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerCreate), (88 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerDelete), (132 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerReset), (6 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerStart), (6 bytes).
+    Removing .\output\tm_stm32f4_delay.o(i.TM_DELAY_TimerStop), (6 bytes).
+    Removing .\output\tm_stm32f4_adc.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_adc.o(i.TM_ADC_DisableVbat), (24 bytes).
+    Removing .\output\tm_stm32f4_adc.o(i.TM_ADC_EnableVbat), (24 bytes).
+    Removing .\output\tm_stm32f4_adc.o(i.TM_ADC_ReadVbat), (58 bytes).
+    Removing .\output\stm32f4xx_adc.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_AnalogWatchdogCmd), (20 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_AnalogWatchdogSingleChannelConfig), (16 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_AnalogWatchdogThresholdsConfig), (6 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_AutoInjectedConvCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ClearFlag), (6 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ClearITPendingBit), (10 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_Cmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_CommonStructInit), (12 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ContinuousModeCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_DMACmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_DMARequestAfterLastTransferCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_DeInit), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_DiscModeChannelCountConfig), (24 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_DiscModeCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_EOCOnEachRegularChannelCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ExternalTrigInjectedConvConfig), (16 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ExternalTrigInjectedConvEdgeConfig), (16 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetConversionValue), (8 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetFlagStatus), (18 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetITStatus), (38 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetInjectedConversionValue), (28 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetMultiModeConversionValue), (12 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetSoftwareStartConvStatus), (20 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_GetSoftwareStartInjectedConvCmdStatus), (20 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_ITConfig), (32 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_InjectedChannelConfig), (130 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_InjectedDiscModeCmd), (22 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_InjectedSequencerLengthConfig), (24 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_MultiModeDMARequestAfterLastTransferCmd), (44 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_SetInjectedOffset), (20 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_SoftwareStartConv), (10 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_SoftwareStartInjectedConv), (10 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_StructInit), (20 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_TempSensorVrefintCmd), (44 bytes).
+    Removing .\output\stm32f4xx_adc.o(i.ADC_VBATCmd), (44 bytes).
+    Removing .\output\tm_stm32f4_lis302dl_lis3dsh.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_spi.o(.emb_text), (8 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_GetPrescalerFromMaxFrequency), (76 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_InitFull), (92 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_InitWithMode), (108 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_ReadMulti16), (80 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_SendMulti), (80 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_SendMulti16), (84 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_SetDataSize), (48 bytes).
+    Removing .\output\tm_stm32f4_spi.o(i.TM_SPI_WriteMulti16), (80 bytes).
+    Removing .\output\stm32f4xx_spi.o(.emb_text), (8 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.I2S_Cmd), (24 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.I2S_FullDuplexConfig), (80 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.I2S_Init), (360 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.I2S_StructInit), (20 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_BiDirectionalLineConfig), (28 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_CalculateCRC), (24 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_Cmd), (24 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_DataSizeConfig), (18 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_GetCRC), (16 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_GetCRCPolynomial), (6 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_ClearFlag), (6 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_ClearITPendingBit), (20 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_DMACmd), (18 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_DeInit), (88 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_GetFlagStatus), (18 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_GetITStatus), (52 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_ITConfig), (32 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_ReceiveData), (6 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_I2S_SendData), (4 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_NSSInternalSoftwareConfig), (30 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_SSOutputCmd), (24 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_TIModeCmd), (24 bytes).
+    Removing .\output\stm32f4xx_spi.o(i.SPI_TransmitCRC), (10 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o)(.text), (222 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfltui.o)(.text), (26 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixui.o)(.text), (50 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdcmple.o)(.text), (48 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o)(.text), (334 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixul.o)(.text), (48 bytes).
+    Removing C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdrcmple.o)(.text), (48 bytes).
+
+233 unused section(s) (total 9413 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o) ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uldiv.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9b.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11b.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10b.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8a.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7a.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o) ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o) ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o) ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o) ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llsshr.o) ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocr.o) ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloc.o) ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mallocra.o) ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(malloca.o) ABSOLUTE
+    ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(mvars.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf8.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfa.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf0.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf7.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf6.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf5.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf4.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf3.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf2.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o) ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printfb.o) ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(memcpya.o) ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(memcpyb.o) ABSOLUTE
+    ../clib/microlib/string/strcat.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o) ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o) ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o) ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dadd.o) ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ddiv.o) ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o) ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o) ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixul.o) ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixui.o) ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o) ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o) ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfltui.o) ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o) ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o) ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o) ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o) ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\misc.c 0x00000000   Number         0  .\output\misc.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_adc.c 0x00000000   Number         0  .\output\stm32f4xx_adc.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_exti.c 0x00000000   Number         0  .\output\stm32f4xx_exti.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_gpio.c 0x00000000   Number         0  .\output\stm32f4xx_gpio.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_rcc.c 0x00000000   Number         0  .\output\stm32f4xx_rcc.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_spi.c 0x00000000   Number         0  .\output\stm32f4xx_spi.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_syscfg.c 0x00000000   Number         0  .\output\stm32f4xx_syscfg.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Libraries\\STM32F4xx_StdPeriph_Driver\\src\\stm32f4xx_usart.c 0x00000000   Number         0  .\output\stm32f4xx_usart.o ABSOLUTE
+    ..\\terceros\\STM32F4-Discovery_FW_V1.1.0\\Utilities\\STM32F4-Discovery\\stm32f4_discovery.c 0x00000000   Number         0  .\output\stm32f4_discovery.o ABSOLUTE
+    ..\\terceros\\accelerometer\\tm_stm32f4_lis302dl_lis3dsh.c 0x00000000   Number         0  .\output\tm_stm32f4_lis302dl_lis3dsh.o ABSOLUTE
+    ..\\terceros\\accelerometer\\tm_stm32f4_spi.c 0x00000000   Number         0  .\output\tm_stm32f4_spi.o ABSOLUTE
+    ..\\terceros\\adc\\tm_stm32f4_adc.c      0x00000000   Number         0  .\output\tm_stm32f4_adc.o ABSOLUTE
+    ..\\terceros\\lcd\\tm_stm32f4_delay.c    0x00000000   Number         0  .\output\tm_stm32f4_delay.o ABSOLUTE
+    ..\\terceros\\lcd\\tm_stm32f4_gpio.c     0x00000000   Number         0  .\output\tm_stm32f4_gpio.o ABSOLUTE
+    ..\\terceros\\lcd\\tm_stm32f4_hd44780.c  0x00000000   Number         0  .\output\tm_stm32f4_hd44780.o ABSOLUTE
+    ..\\terceros\\lcd\\tm_stm32f4_timer_properties.c 0x00000000   Number         0  .\output\tm_stm32f4_timer_properties.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Source\Templates\arm\startup_stm32f4xx.s 0x00000000   Number         0  .\output\startup_stm32f4xx.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c 0x00000000   Number         0  .\output\misc.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c 0x00000000   Number         0  .\output\stm32f4xx_adc.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c 0x00000000   Number         0  .\output\stm32f4xx_exti.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c 0x00000000   Number         0  .\output\stm32f4xx_gpio.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c 0x00000000   Number         0  .\output\stm32f4xx_rcc.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c 0x00000000   Number         0  .\output\stm32f4xx_spi.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c 0x00000000   Number         0  .\output\stm32f4xx_syscfg.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c 0x00000000   Number         0  .\output\stm32f4xx_usart.o ABSOLUTE
+    ..\terceros\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery\stm32f4_discovery.c 0x00000000   Number         0  .\output\stm32f4_discovery.o ABSOLUTE
+    ..\terceros\accelerometer\tm_stm32f4_lis302dl_lis3dsh.c 0x00000000   Number         0  .\output\tm_stm32f4_lis302dl_lis3dsh.o ABSOLUTE
+    ..\terceros\accelerometer\tm_stm32f4_spi.c 0x00000000   Number         0  .\output\tm_stm32f4_spi.o ABSOLUTE
+    ..\terceros\adc\tm_stm32f4_adc.c         0x00000000   Number         0  .\output\tm_stm32f4_adc.o ABSOLUTE
+    ..\terceros\binario\binario.c            0x00000000   Number         0  .\output\binario.o ABSOLUTE
+    ..\terceros\lcd\tm_stm32f4_delay.c       0x00000000   Number         0  .\output\tm_stm32f4_delay.o ABSOLUTE
+    ..\terceros\lcd\tm_stm32f4_gpio.c        0x00000000   Number         0  .\output\tm_stm32f4_gpio.o ABSOLUTE
+    ..\terceros\lcd\tm_stm32f4_hd44780.c     0x00000000   Number         0  .\output\tm_stm32f4_hd44780.o ABSOLUTE
+    ..\terceros\lcd\tm_stm32f4_timer_properties.c 0x00000000   Number         0  .\output\tm_stm32f4_timer_properties.o ABSOLUTE
+    cdcmple.s                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdcmple.o) ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(cdrcmple.o) ABSOLUTE
+    dc.s                                     0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(dc.o) ABSOLUTE
+    fputc_debug.c                            0x00000000   Number         0  .\output\fputc_debug.o ABSOLUTE
+    fputc_debug.c                            0x00000000   Number         0  .\output\fputc_debug.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o) ABSOLUTE
+    init.s                                   0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o) ABSOLUTE
+    main.c                                   0x00000000   Number         0  .\output\main.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  .\output\main.o ABSOLUTE
+    stm32f4xx_it.c                           0x00000000   Number         0  .\output\stm32f4xx_it.o ABSOLUTE
+    stm32f4xx_it.c                           0x00000000   Number         0  .\output\stm32f4xx_it.o ABSOLUTE
+    system_stm32f4xx.c                       0x00000000   Number         0  .\output\system_stm32f4xx.o ABSOLUTE
+    system_stm32f4xx.c                       0x00000000   Number         0  .\output\system_stm32f4xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      392  .\output\startup_stm32f4xx.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000188   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000188   Section        4  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0800018c   Section        4  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x08000190   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o)(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x08000190   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o)(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x08000190   Section        8  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x08000198   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o)(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x08000198   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o)(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000198   Section        4  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000198   Data           4  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00002712)
+    .text                                    0x0800019c   Section       36  .\output\startup_stm32f4xx.o(.text)
+    .text                                    0x080001c0   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o)(.text)
+    .text                                    0x080001d8   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o)(.text)
+    .text                                    0x080001e6   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)(.text)
+    .text                                    0x0800024a   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text)
+    .text                                    0x0800032e   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text)
+    .text                                    0x08000340   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)(.text)
+    .text                                    0x08000362   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)(.text)
+    .text                                    0x08000394   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)(.text)
+    .text                                    0x080003d2   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text)
+    .text                                    0x080003fe   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text)
+    .text                                    0x0800041e   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text)
+    .text                                    0x0800041e   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)(.text)
+    .text                                    0x0800048c   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text)
+    .text                                    0x08000548   Section       36  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)(.text)
+    .text                                    0x0800056c   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text)
+    i.ADC_CommonInit                         0x0800058c   Section        0  .\output\stm32f4xx_adc.o(i.ADC_CommonInit)
+    i.ADC_Init                               0x080005bc   Section        0  .\output\stm32f4xx_adc.o(i.ADC_Init)
+    i.ADC_RegularChannelConfig               0x08000610   Section        0  .\output\stm32f4xx_adc.o(i.ADC_RegularChannelConfig)
+    i.BusFault_Handler                       0x080006c8   Section        0  .\output\stm32f4xx_it.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x080006cc   Section        0  .\output\stm32f4xx_it.o(i.DebugMon_Handler)
+    i.Delay                                  0x080006d0   Section        0  .\output\tm_stm32f4_hd44780.o(i.Delay)
+    Delay                                    0x080006d1   Thumb Code    20  .\output\tm_stm32f4_hd44780.o(i.Delay)
+    i.Delayms                                0x080006e8   Section        0  .\output\main.o(i.Delayms)
+    Delayms                                  0x080006e9   Thumb Code    54  .\output\main.o(i.Delayms)
+    i.GPIO_Init                              0x08000724   Section        0  .\output\stm32f4xx_gpio.o(i.GPIO_Init)
+    i.GPIO_PinAFConfig                       0x080007b4   Section        0  .\output\stm32f4xx_gpio.o(i.GPIO_PinAFConfig)
+    i.GPIO_ReadInputDataBit                  0x080007fa   Section        0  .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputDataBit)
+    i.GPIO_ReadOutputData                    0x0800080c   Section        0  .\output\stm32f4xx_gpio.o(i.GPIO_ReadOutputData)
+    i.GPIO_Write                             0x08000814   Section        0  .\output\stm32f4xx_gpio.o(i.GPIO_Write)
+    i.HardFault_Handler                      0x08000818   Section        0  .\output\stm32f4xx_it.o(i.HardFault_Handler)
+    i.MemManage_Handler                      0x0800081c   Section        0  .\output\stm32f4xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08000820   Section        0  .\output\stm32f4xx_it.o(i.NMI_Handler)
+    i.NVIC_Init                              0x08000824   Section        0  .\output\misc.o(i.NVIC_Init)
+    i.PendSV_Handler                         0x0800089c   Section        0  .\output\stm32f4xx_it.o(i.PendSV_Handler)
+    i.RCC_AHB1PeriphClockCmd                 0x080008a0   Section        0  .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd)
+    i.RCC_APB1PeriphClockCmd                 0x080008c0   Section        0  .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_GetClocksFreq                      0x080008e0   Section        0  .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq)
+    i.SPI_Init                               0x080009c8   Section        0  .\output\stm32f4xx_spi.o(i.SPI_Init)
+    i.SPI_StructInit                         0x08000a04   Section        0  .\output\stm32f4xx_spi.o(i.SPI_StructInit)
+    i.SVC_Handler                            0x08000a1c   Section        0  .\output\stm32f4xx_it.o(i.SVC_Handler)
+    i.SetSysClock                            0x08000a20   Section        0  .\output\system_stm32f4xx.o(i.SetSysClock)
+    SetSysClock                              0x08000a21   Thumb Code   220  .\output\system_stm32f4xx.o(i.SetSysClock)
+    i.ShowDisplay                            0x08000b0c   Section        0  .\output\main.o(i.ShowDisplay)
+    i.SysTick_Handler                        0x08000b54   Section        0  .\output\tm_stm32f4_delay.o(i.SysTick_Handler)
+    i.SystemInit                             0x08000c04   Section        0  .\output\system_stm32f4xx.o(i.SystemInit)
+    i.TM_ADC_INT_Channel_0_Init              0x08000c60   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_0_Init)
+    i.TM_ADC_INT_Channel_10_Init             0x08000c74   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_10_Init)
+    i.TM_ADC_INT_Channel_11_Init             0x08000c88   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_11_Init)
+    i.TM_ADC_INT_Channel_12_Init             0x08000c9c   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_12_Init)
+    i.TM_ADC_INT_Channel_13_Init             0x08000cb0   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_13_Init)
+    i.TM_ADC_INT_Channel_14_Init             0x08000cc4   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_14_Init)
+    i.TM_ADC_INT_Channel_15_Init             0x08000d00   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_15_Init)
+    i.TM_ADC_INT_Channel_1_Init              0x08000d40   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_1_Init)
+    i.TM_ADC_INT_Channel_2_Init              0x08000d54   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_2_Init)
+    i.TM_ADC_INT_Channel_3_Init              0x08000d68   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_3_Init)
+    i.TM_ADC_INT_Channel_4_Init              0x08000d7c   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_4_Init)
+    i.TM_ADC_INT_Channel_5_Init              0x08000db8   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_5_Init)
+    i.TM_ADC_INT_Channel_6_Init              0x08000df4   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_6_Init)
+    i.TM_ADC_INT_Channel_7_Init              0x08000e30   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_7_Init)
+    i.TM_ADC_INT_Channel_8_Init              0x08000e6c   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_8_Init)
+    i.TM_ADC_INT_Channel_9_Init              0x08000ea8   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_9_Init)
+    i.TM_ADC_INT_InitPin                     0x08000ee4   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin)
+    i.TM_ADC_Init                            0x08000f00   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_Init)
+    i.TM_ADC_InitADC                         0x08000fcc   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_InitADC)
+    i.TM_ADC_Read                            0x0800106c   Section        0  .\output\tm_stm32f4_adc.o(i.TM_ADC_Read)
+    i.TM_DELAY_Init                          0x080010a8   Section        0  .\output\tm_stm32f4_delay.o(i.TM_DELAY_Init)
+    i.TM_GPIO_GetPortSource                  0x08001130   Section        0  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource)
+    i.TM_GPIO_INT_EnableClock                0x08001140   Section        0  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_EnableClock)
+    i.TM_GPIO_INT_Init                       0x08001160   Section        0  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init)
+    i.TM_GPIO_Init                           0x08001210   Section        0  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init)
+    i.TM_GPIO_InitAlternate                  0x08001240   Section        0  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate)
+    i.TM_HD44780_Clear                       0x080012ae   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear)
+    i.TM_HD44780_Cmd                         0x080012c0   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd)
+    TM_HD44780_Cmd                           0x080012c1   Thumb Code    28  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd)
+    i.TM_HD44780_Cmd4bit                     0x080012e0   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit)
+    TM_HD44780_Cmd4bit                       0x080012e1   Thumb Code   124  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Cmd4bit)
+    i.TM_HD44780_CursorSet                   0x08001360   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet)
+    TM_HD44780_CursorSet                     0x08001361   Thumb Code    46  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_CursorSet)
+    i.TM_HD44780_Data                        0x08001398   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data)
+    TM_HD44780_Data                          0x08001399   Thumb Code    28  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Data)
+    i.TM_HD44780_DisplayOn                   0x080013b8   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOn)
+    i.TM_HD44780_Init                        0x080013d8   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init)
+    i.TM_HD44780_InitPins                    0x0800147c   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_InitPins)
+    TM_HD44780_InitPins                      0x0800147d   Thumb Code   142  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_InitPins)
+    i.TM_HD44780_Puts                        0x08001510   Section        0  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts)
+    i.TM_LIS302DL_INT_ReadAxes               0x08001594   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes)
+    i.TM_LIS302DL_LIS3DSH_Detect             0x08001628   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect)
+    i.TM_LIS302DL_LIS3DSH_INT_Delay          0x08001664   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_Delay)
+    i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL   0x08001678   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL)
+    i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH    0x0800174c   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH)
+    i.TM_LIS302DL_LIS3DSH_INT_InitPins       0x08001800   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins)
+    i.TM_LIS302DL_LIS3DSH_INT_ReadSPI        0x08001858   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI)
+    i.TM_LIS302DL_LIS3DSH_INT_WriteSPI       0x08001898   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI)
+    i.TM_LIS302DL_LIS3DSH_Init               0x080018dc   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init)
+    i.TM_LIS302DL_LIS3DSH_ReadAxes           0x08001920   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes)
+    i.TM_LIS3DSH_INT_ReadAxes                0x08001950   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes)
+    i.TM_SPI1_INT_InitPins                   0x08001a18   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI1_INT_InitPins)
+    i.TM_SPI2_INT_InitPins                   0x08001a64   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI2_INT_InitPins)
+    i.TM_SPI3_INT_InitPins                   0x08001ae4   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI3_INT_InitPins)
+    i.TM_SPI_Init                            0x08001b34   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI_Init)
+    i.TM_SPI_InitCustomPinsCallback          0x08001b9c   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI_InitCustomPinsCallback)
+    i.TM_SPI_ReadMulti                       0x08001b9e   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI_ReadMulti)
+    i.TM_SPI_Send                            0x08001bec   Section        0  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_SPI_Send)
+    TM_SPI_Send                              0x08001bed   Thumb Code    66  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_SPI_Send)
+    i.TM_SPI_WriteMulti                      0x08001c2e   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPI_WriteMulti)
+    i.TM_SPIx_Init                           0x08001c7c   Section        0  .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init)
+    TM_SPIx_Init                             0x08001c7d   Thumb Code   244  .\output\tm_stm32f4_spi.o(i.TM_SPIx_Init)
+    i.USART3_Init                            0x08001d80   Section        0  .\output\main.o(i.USART3_Init)
+    i.USART_Cmd                              0x08001e2c   Section        0  .\output\stm32f4xx_usart.o(i.USART_Cmd)
+    i.USART_ITConfig                         0x08001e44   Section        0  .\output\stm32f4xx_usart.o(i.USART_ITConfig)
+    i.USART_Init                             0x08001e90   Section        0  .\output\stm32f4xx_usart.o(i.USART_Init)
+    i.USART_SendData                         0x08001f64   Section        0  .\output\stm32f4xx_usart.o(i.USART_SendData)
+    i.USART_SendString                       0x08001f6c   Section        0  .\output\main.o(i.USART_SendString)
+    i.UsageFault_Handler                     0x08001fa0   Section        0  .\output\stm32f4xx_it.o(i.UsageFault_Handler)
+    i.__0printf$1                            0x08001fa4   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1)
+    i.__0sprintf$1                           0x08001fc4   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1)
+    i.__scatterload_copy                     0x08001fec   Section       14  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001ffa   Section        2  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001ffc   Section       14  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
+    i._printf_core                           0x0800200c   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core)
+    _printf_core                             0x0800200d   Thumb Code   336  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._printf_core)
+    i._sputc                                 0x08002160   Section        0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._sputc)
+    _sputc                                   0x08002161   Thumb Code    10  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i._sputc)
+    i.binario                                0x0800216c   Section        0  .\output\binario.o(i.binario)
+    i.buttons_init                           0x080021c8   Section        0  .\output\main.o(i.buttons_init)
+    i.display_init                           0x080021f0   Section        0  .\output\main.o(i.display_init)
+    i.fputc                                  0x08002230   Section        0  .\output\fputc_debug.o(i.fputc)
+    i.leds_init                              0x08002274   Section        0  .\output\main.o(i.leds_init)
+    i.main                                   0x080022a8   Section        0  .\output\main.o(i.main)
+    i.map                                    0x080024e0   Section        0  .\output\main.o(i.map)
+    i.shoot_button                           0x08002504   Section        0  .\output\main.o(i.shoot_button)
+    i.stabilizer_button                      0x0800251c   Section        0  .\output\main.o(i.stabilizer_button)
+    .data                                    0x20000000   Section       20  .\output\system_stm32f4xx.o(.data)
+    .data                                    0x20000014   Section       54  .\output\main.o(.data)
+    .data                                    0x2000004c   Section        8  .\output\fputc_debug.o(.data)
+    .data                                    0x20000054   Section       16  .\output\stm32f4xx_rcc.o(.data)
+    APBAHBPrescTable                         0x20000054   Data          16  .\output\stm32f4xx_rcc.o(.data)
+    .data                                    0x20000064   Section        4  .\output\binario.o(.data)
+    nr                                       0x20000064   Data           4  .\output\binario.o(.data)
+    .data                                    0x20000068   Section        7  .\output\tm_stm32f4_hd44780.o(.data)
+    HD44780_Opts                             0x20000068   Data           7  .\output\tm_stm32f4_hd44780.o(.data)
+    .data                                    0x20000070   Section       17  .\output\tm_stm32f4_delay.o(.data)
+    .data                                    0x20000084   Section        9  .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data)
+    initialized                              0x2000008c   Data           1  .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data)
+    .bss                                     0x20000090   Section       80  .\output\main.o(.bss)
+    .bss                                     0x200000e0   Section       22  .\output\tm_stm32f4_gpio.o(.bss)
+    GPIO_UsedPins                            0x200000e0   Data          22  .\output\tm_stm32f4_gpio.o(.bss)
+    .bss                                     0x200000f8   Section       24  .\output\tm_stm32f4_delay.o(.bss)
+    CustomTimers                             0x200000f8   Data          24  .\output\tm_stm32f4_delay.o(.bss)
+    STACK                                    0x20000110   Section     1024  .\output\startup_stm32f4xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  .\output\main.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_c                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_d                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_e                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_f                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_g                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_i                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_l                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_n                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_o                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_p                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_s                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_str                              0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_u                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    _printf_x                                0x00000000   Number         0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(stubs.o) ABSOLUTE
+    TM_DELAY_1msHandler                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000188   Number         0  .\output\startup_stm32f4xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  .\output\startup_stm32f4xx.o(RESET)
+    __Vectors_End                            0x08000188   Data           0  .\output\startup_stm32f4xx.o(RESET)
+    __main                                   0x08000189   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000189   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0800018d   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000191   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)(.ARM.Collect$$$$00000004)
+    _main_clock                              0x08000191   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o)(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x08000191   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o)(.ARM.Collect$$$$0000000A)
+    _main_init                               0x08000191   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000199   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o)(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x08000199   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o)(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x0800019d   Thumb Code     8  .\output\startup_stm32f4xx.o(.text)
+    ADC_IRQHandler                           0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN1_RX0_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN1_RX1_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN1_SCE_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN1_TX_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN2_RX0_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN2_RX1_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN2_SCE_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CAN2_TX_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    CRYP_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DCMI_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream0_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream1_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream2_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream3_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream4_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream5_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream6_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA1_Stream7_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream0_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream1_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream2_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream3_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream4_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream5_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream6_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    DMA2_Stream7_IRQHandler                  0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    ETH_IRQHandler                           0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    ETH_WKUP_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI0_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI15_10_IRQHandler                     0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI1_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI2_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI3_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI4_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    EXTI9_5_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    FLASH_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    FPU_IRQHandler                           0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    FSMC_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    HASH_RNG_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C1_ER_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C1_EV_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C2_ER_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C2_EV_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C3_ER_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    I2C3_EV_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_FS_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_FS_WKUP_IRQHandler                   0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_HS_EP1_IN_IRQHandler                 0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_HS_EP1_OUT_IRQHandler                0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_HS_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    OTG_HS_WKUP_IRQHandler                   0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    PVD_IRQHandler                           0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    RCC_IRQHandler                           0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    RTC_Alarm_IRQHandler                     0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    RTC_WKUP_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    SDIO_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    SPI1_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    SPI2_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    SPI3_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TAMP_STAMP_IRQHandler                    0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM1_BRK_TIM9_IRQHandler                 0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM1_CC_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM1_TRG_COM_TIM11_IRQHandler            0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM1_UP_TIM10_IRQHandler                 0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM2_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM3_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM4_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM5_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM6_DAC_IRQHandler                      0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM7_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM8_BRK_TIM12_IRQHandler                0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM8_CC_IRQHandler                       0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM8_TRG_COM_TIM14_IRQHandler            0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    TIM8_UP_TIM13_IRQHandler                 0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    UART4_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    UART5_IRQHandler                         0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    USART1_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    USART2_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    USART3_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    USART6_IRQHandler                        0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    WWDG_IRQHandler                          0x080001b7   Thumb Code     0  .\output\startup_stm32f4xx.o(.text)
+    strcat                                   0x080001c1   Thumb Code    24  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o)(.text)
+    strlen                                   0x080001d9   Thumb Code    14  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o)(.text)
+    __aeabi_fmul                             0x080001e7   Thumb Code   100  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)(.text)
+    __aeabi_dmul                             0x0800024b   Thumb Code   228  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)(.text)
+    __aeabi_i2f                              0x0800032f   Thumb Code    18  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)(.text)
+    __aeabi_i2d                              0x08000341   Thumb Code    34  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)(.text)
+    __aeabi_f2iz                             0x08000363   Thumb Code    50  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)(.text)
+    __aeabi_d2iz                             0x08000395   Thumb Code    62  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)(.text)
+    __aeabi_uidiv                            0x080003d3   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text)
+    __aeabi_uidivmod                         0x080003d3   Thumb Code    44  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)(.text)
+    __aeabi_llsr                             0x080003ff   Thumb Code    32  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text)
+    _ll_ushift_r                             0x080003ff   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)(.text)
+    __I$use$fp                               0x0800041f   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)(.text)
+    _float_round                             0x0800041f   Thumb Code    18  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)(.text)
+    _float_epilogue                          0x08000431   Thumb Code    92  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)(.text)
+    _double_round                            0x0800048d   Thumb Code    30  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text)
+    _double_epilogue                         0x080004ab   Thumb Code   156  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)(.text)
+    __scatterload                            0x08000549   Thumb Code    28  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)(.text)
+    __scatterload_rt2                        0x08000549   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)(.text)
+    __aeabi_llsl                             0x0800056d   Thumb Code    30  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text)
+    _ll_shift_l                              0x0800056d   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)(.text)
+    ADC_CommonInit                           0x0800058d   Thumb Code    34  .\output\stm32f4xx_adc.o(i.ADC_CommonInit)
+    ADC_Init                                 0x080005bd   Thumb Code    74  .\output\stm32f4xx_adc.o(i.ADC_Init)
+    ADC_RegularChannelConfig                 0x08000611   Thumb Code   184  .\output\stm32f4xx_adc.o(i.ADC_RegularChannelConfig)
+    BusFault_Handler                         0x080006c9   Thumb Code     4  .\output\stm32f4xx_it.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x080006cd   Thumb Code     2  .\output\stm32f4xx_it.o(i.DebugMon_Handler)
+    GPIO_Init                                0x08000725   Thumb Code   144  .\output\stm32f4xx_gpio.o(i.GPIO_Init)
+    GPIO_PinAFConfig                         0x080007b5   Thumb Code    70  .\output\stm32f4xx_gpio.o(i.GPIO_PinAFConfig)
+    GPIO_ReadInputDataBit                    0x080007fb   Thumb Code    18  .\output\stm32f4xx_gpio.o(i.GPIO_ReadInputDataBit)
+    GPIO_ReadOutputData                      0x0800080d   Thumb Code     8  .\output\stm32f4xx_gpio.o(i.GPIO_ReadOutputData)
+    GPIO_Write                               0x08000815   Thumb Code     4  .\output\stm32f4xx_gpio.o(i.GPIO_Write)
+    HardFault_Handler                        0x08000819   Thumb Code     4  .\output\stm32f4xx_it.o(i.HardFault_Handler)
+    MemManage_Handler                        0x0800081d   Thumb Code     4  .\output\stm32f4xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08000821   Thumb Code     2  .\output\stm32f4xx_it.o(i.NMI_Handler)
+    NVIC_Init                                0x08000825   Thumb Code   106  .\output\misc.o(i.NVIC_Init)
+    PendSV_Handler                           0x0800089d   Thumb Code     2  .\output\stm32f4xx_it.o(i.PendSV_Handler)
+    RCC_AHB1PeriphClockCmd                   0x080008a1   Thumb Code    26  .\output\stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd)
+    RCC_APB1PeriphClockCmd                   0x080008c1   Thumb Code    26  .\output\stm32f4xx_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_GetClocksFreq                        0x080008e1   Thumb Code   214  .\output\stm32f4xx_rcc.o(i.RCC_GetClocksFreq)
+    SPI_Init                                 0x080009c9   Thumb Code    60  .\output\stm32f4xx_spi.o(i.SPI_Init)
+    SPI_StructInit                           0x08000a05   Thumb Code    24  .\output\stm32f4xx_spi.o(i.SPI_StructInit)
+    SVC_Handler                              0x08000a1d   Thumb Code     2  .\output\stm32f4xx_it.o(i.SVC_Handler)
+    ShowDisplay                              0x08000b0d   Thumb Code    58  .\output\main.o(i.ShowDisplay)
+    SysTick_Handler                          0x08000b55   Thumb Code   162  .\output\tm_stm32f4_delay.o(i.SysTick_Handler)
+    SystemInit                               0x08000c05   Thumb Code    74  .\output\system_stm32f4xx.o(i.SystemInit)
+    TM_ADC_INT_Channel_0_Init                0x08000c61   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_0_Init)
+    TM_ADC_INT_Channel_10_Init               0x08000c75   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_10_Init)
+    TM_ADC_INT_Channel_11_Init               0x08000c89   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_11_Init)
+    TM_ADC_INT_Channel_12_Init               0x08000c9d   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_12_Init)
+    TM_ADC_INT_Channel_13_Init               0x08000cb1   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_13_Init)
+    TM_ADC_INT_Channel_14_Init               0x08000cc5   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_14_Init)
+    TM_ADC_INT_Channel_15_Init               0x08000d01   Thumb Code    42  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_15_Init)
+    TM_ADC_INT_Channel_1_Init                0x08000d41   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_1_Init)
+    TM_ADC_INT_Channel_2_Init                0x08000d55   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_2_Init)
+    TM_ADC_INT_Channel_3_Init                0x08000d69   Thumb Code    14  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_3_Init)
+    TM_ADC_INT_Channel_4_Init                0x08000d7d   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_4_Init)
+    TM_ADC_INT_Channel_5_Init                0x08000db9   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_5_Init)
+    TM_ADC_INT_Channel_6_Init                0x08000df5   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_6_Init)
+    TM_ADC_INT_Channel_7_Init                0x08000e31   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_7_Init)
+    TM_ADC_INT_Channel_8_Init                0x08000e6d   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_8_Init)
+    TM_ADC_INT_Channel_9_Init                0x08000ea9   Thumb Code    40  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_Channel_9_Init)
+    TM_ADC_INT_InitPin                       0x08000ee5   Thumb Code    28  .\output\tm_stm32f4_adc.o(i.TM_ADC_INT_InitPin)
+    TM_ADC_Init                              0x08000f01   Thumb Code   204  .\output\tm_stm32f4_adc.o(i.TM_ADC_Init)
+    TM_ADC_InitADC                           0x08000fcd   Thumb Code   144  .\output\tm_stm32f4_adc.o(i.TM_ADC_InitADC)
+    TM_ADC_Read                              0x0800106d   Thumb Code    58  .\output\tm_stm32f4_adc.o(i.TM_ADC_Read)
+    TM_DELAY_Init                            0x080010a9   Thumb Code   112  .\output\tm_stm32f4_delay.o(i.TM_DELAY_Init)
+    TM_GPIO_GetPortSource                    0x08001131   Thumb Code    14  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_GetPortSource)
+    TM_GPIO_INT_EnableClock                  0x08001141   Thumb Code    28  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_EnableClock)
+    TM_GPIO_INT_Init                         0x08001161   Thumb Code   170  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_INT_Init)
+    TM_GPIO_Init                             0x08001211   Thumb Code    48  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_Init)
+    TM_GPIO_InitAlternate                    0x08001241   Thumb Code   110  .\output\tm_stm32f4_gpio.o(i.TM_GPIO_InitAlternate)
+    TM_HD44780_Clear                         0x080012af   Thumb Code    18  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Clear)
+    TM_HD44780_DisplayOn                     0x080013b9   Thumb Code    26  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_DisplayOn)
+    TM_HD44780_Init                          0x080013d9   Thumb Code   158  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Init)
+    TM_HD44780_Puts                          0x08001511   Thumb Code   126  .\output\tm_stm32f4_hd44780.o(i.TM_HD44780_Puts)
+    TM_LIS302DL_INT_ReadAxes                 0x08001595   Thumb Code   144  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_INT_ReadAxes)
+    TM_LIS302DL_LIS3DSH_Detect               0x08001629   Thumb Code    56  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Detect)
+    TM_LIS302DL_LIS3DSH_INT_Delay            0x08001665   Thumb Code    14  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_Delay)
+    TM_LIS302DL_LIS3DSH_INT_InitLIS302DL     0x08001679   Thumb Code   198  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL)
+    TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH      0x0800174d   Thumb Code   156  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH)
+    TM_LIS302DL_LIS3DSH_INT_InitPins         0x08001801   Thumb Code    76  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_InitPins)
+    TM_LIS302DL_LIS3DSH_INT_ReadSPI          0x08001859   Thumb Code    54  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_ReadSPI)
+    TM_LIS302DL_LIS3DSH_INT_WriteSPI         0x08001899   Thumb Code    56  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_INT_WriteSPI)
+    TM_LIS302DL_LIS3DSH_Init                 0x080018dd   Thumb Code    64  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_Init)
+    TM_LIS302DL_LIS3DSH_ReadAxes             0x08001921   Thumb Code    44  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS302DL_LIS3DSH_ReadAxes)
+    TM_LIS3DSH_INT_ReadAxes                  0x08001951   Thumb Code   194  .\output\tm_stm32f4_lis302dl_lis3dsh.o(i.TM_LIS3DSH_INT_ReadAxes)
+    TM_SPI1_INT_InitPins                     0x08001a19   Thumb Code    64  .\output\tm_stm32f4_spi.o(i.TM_SPI1_INT_InitPins)
+    TM_SPI2_INT_InitPins                     0x08001a65   Thumb Code   112  .\output\tm_stm32f4_spi.o(i.TM_SPI2_INT_InitPins)
+    TM_SPI3_INT_InitPins                     0x08001ae5   Thumb Code    66  .\output\tm_stm32f4_spi.o(i.TM_SPI3_INT_InitPins)
+    TM_SPI_Init                              0x08001b35   Thumb Code    92  .\output\tm_stm32f4_spi.o(i.TM_SPI_Init)
+    TM_SPI_InitCustomPinsCallback            0x08001b9d   Thumb Code     2  .\output\tm_stm32f4_spi.o(i.TM_SPI_InitCustomPinsCallback)
+    TM_SPI_ReadMulti                         0x08001b9f   Thumb Code    78  .\output\tm_stm32f4_spi.o(i.TM_SPI_ReadMulti)
+    TM_SPI_WriteMulti                        0x08001c2f   Thumb Code    78  .\output\tm_stm32f4_spi.o(i.TM_SPI_WriteMulti)
+    USART3_Init                              0x08001d81   Thumb Code   164  .\output\main.o(i.USART3_Init)
+    USART_Cmd                                0x08001e2d   Thumb Code    24  .\output\stm32f4xx_usart.o(i.USART_Cmd)
+    USART_ITConfig                           0x08001e45   Thumb Code    74  .\output\stm32f4xx_usart.o(i.USART_ITConfig)
+    USART_Init                               0x08001e91   Thumb Code   204  .\output\stm32f4xx_usart.o(i.USART_Init)
+    USART_SendData                           0x08001f65   Thumb Code     8  .\output\stm32f4xx_usart.o(i.USART_SendData)
+    USART_SendString                         0x08001f6d   Thumb Code    52  .\output\main.o(i.USART_SendString)
+    UsageFault_Handler                       0x08001fa1   Thumb Code     4  .\output\stm32f4xx_it.o(i.UsageFault_Handler)
+    __0printf$1                              0x08001fa5   Thumb Code    22  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1)
+    __1printf$1                              0x08001fa5   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1)
+    __2printf                                0x08001fa5   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0printf$1)
+    __0sprintf$1                             0x08001fc5   Thumb Code    34  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1)
+    __1sprintf$1                             0x08001fc5   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1)
+    __2sprintf                               0x08001fc5   Thumb Code     0  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)(i.__0sprintf$1)
+    __scatterload_copy                       0x08001fed   Thumb Code    14  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_copy)
+    __scatterload_null                       0x08001ffb   Thumb Code     2  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001ffd   Thumb Code    14  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)(i.__scatterload_zeroinit)
+    binario                                  0x0800216d   Thumb Code    84  .\output\binario.o(i.binario)
+    buttons_init                             0x080021c9   Thumb Code    36  .\output\main.o(i.buttons_init)
+    display_init                             0x080021f1   Thumb Code    56  .\output\main.o(i.display_init)
+    fputc                                    0x08002231   Thumb Code    60  .\output\fputc_debug.o(i.fputc)
+    leds_init                                0x08002275   Thumb Code    46  .\output\main.o(i.leds_init)
+    main                                     0x080022a9   Thumb Code   490  .\output\main.o(i.main)
+    map                                      0x080024e1   Thumb Code    34  .\output\main.o(i.map)
+    shoot_button                             0x08002505   Thumb Code    20  .\output\main.o(i.shoot_button)
+    stabilizer_button                        0x0800251d   Thumb Code    20  .\output\main.o(i.stabilizer_button)
+    Region$$Table$$Base                      0x08002534   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002554   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  .\output\system_stm32f4xx.o(.data)
+    AHBPrescTable                            0x20000004   Data          16  .\output\system_stm32f4xx.o(.data)
+    machineAxesX                             0x20000014   Data           5  .\output\main.o(.data)
+    machineAxesY                             0x20000019   Data           5  .\output\main.o(.data)
+    shoot                                    0x2000001e   Data           2  .\output\main.o(.data)
+    stabilizer                               0x20000020   Data           1  .\output\main.o(.data)
+    PuertoE                                  0x20000022   Data           2  .\output\main.o(.data)
+    display                                  0x20000024   Data          20  .\output\main.o(.data)
+    LED                                      0x20000038   Data          18  .\output\main.o(.data)
+    __stdout                                 0x2000004c   Data           4  .\output\fputc_debug.o(.data)
+    __stdin                                  0x20000050   Data           4  .\output\fputc_debug.o(.data)
+    TM_TimingDelay                           0x20000070   Data           4  .\output\tm_stm32f4_delay.o(.data)
+    TM_Time                                  0x20000074   Data           4  .\output\tm_stm32f4_delay.o(.data)
+    TM_Time2                                 0x20000078   Data           4  .\output\tm_stm32f4_delay.o(.data)
+    mult                                     0x2000007c   Data           4  .\output\tm_stm32f4_delay.o(.data)
+    TM_DELAY_Initialized                     0x20000080   Data           1  .\output\tm_stm32f4_delay.o(.data)
+    TM_LIS302DL_LIS3DSH_INT_Device           0x20000084   Data           1  .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data)
+    TM_LIS3DSH_INT_Sensitivity               0x20000088   Data           4  .\output\tm_stm32f4_lis302dl_lis3dsh.o(.data)
+    pot                                      0x20000090   Data          20  .\output\main.o(.bss)
+    axesX                                    0x200000a4   Data          20  .\output\main.o(.bss)
+    axesY                                    0x200000b8   Data          20  .\output\main.o(.bss)
+    data                                     0x200000cc   Data          20  .\output\main.o(.bss)
+    __initial_sp                             0x20000510   Data           0  .\output\startup_stm32f4xx.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000189
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000025e4, Max: 0x00100000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00002554, Max: 0x00100000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000188   Data   RO         1111    RESET               .\output\startup_stm32f4xx.o
+    0x08000188   0x00000000   Code   RO         2244  * .ARM.Collect$$$$00000000  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)
+    0x08000188   0x00000004   Code   RO         2560    .ARM.Collect$$$$00000001  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)
+    0x0800018c   0x00000004   Code   RO         2563    .ARM.Collect$$$$00000004  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)
+    0x08000190   0x00000000   Code   RO         2565    .ARM.Collect$$$$00000008  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o)
+    0x08000190   0x00000000   Code   RO         2567    .ARM.Collect$$$$0000000A  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o)
+    0x08000190   0x00000008   Code   RO         2568    .ARM.Collect$$$$0000000B  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)
+    0x08000198   0x00000000   Code   RO         2570    .ARM.Collect$$$$0000000D  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o)
+    0x08000198   0x00000000   Code   RO         2572    .ARM.Collect$$$$0000000F  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o)
+    0x08000198   0x00000004   Code   RO         2561    .ARM.Collect$$$$00002712  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)
+    0x0800019c   0x00000024   Code   RO         1112    .text               .\output\startup_stm32f4xx.o
+    0x080001c0   0x00000018   Code   RO         2247    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o)
+    0x080001d8   0x0000000e   Code   RO         2249    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o)
+    0x080001e6   0x00000064   Code   RO         2540    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)
+    0x0800024a   0x000000e4   Code   RO         2542    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)
+    0x0800032e   0x00000012   Code   RO         2546    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)
+    0x08000340   0x00000022   Code   RO         2548    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)
+    0x08000362   0x00000032   Code   RO         2552    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)
+    0x08000394   0x0000003e   Code   RO         2554    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)
+    0x080003d2   0x0000002c   Code   RO         2574    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)
+    0x080003fe   0x00000020   Code   RO         2578    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)
+    0x0800041e   0x00000000   Code   RO         2586    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)
+    0x0800041e   0x0000006e   Code   RO         2587    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)
+    0x0800048c   0x000000ba   Code   RO         2589    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)
+    0x08000546   0x00000002   PAD
+    0x08000548   0x00000024   Code   RO         2597    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)
+    0x0800056c   0x0000001e   Code   RO         2599    .text               C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)
+    0x0800058a   0x00000002   PAD
+    0x0800058c   0x00000030   Code   RO         1653    i.ADC_CommonInit    .\output\stm32f4xx_adc.o
+    0x080005bc   0x00000054   Code   RO         1672    i.ADC_Init          .\output\stm32f4xx_adc.o
+    0x08000610   0x000000b8   Code   RO         1677    i.ADC_RegularChannelConfig  .\output\stm32f4xx_adc.o
+    0x080006c8   0x00000004   Code   RO          265    i.BusFault_Handler  .\output\stm32f4xx_it.o
+    0x080006cc   0x00000002   Code   RO          266    i.DebugMon_Handler  .\output\stm32f4xx_it.o
+    0x080006ce   0x00000002   PAD
+    0x080006d0   0x00000018   Code   RO         1130    i.Delay             .\output\tm_stm32f4_hd44780.o
+    0x080006e8   0x0000003c   Code   RO          138    i.Delayms           .\output\main.o
+    0x08000724   0x00000090   Code   RO          729    i.GPIO_Init         .\output\stm32f4xx_gpio.o
+    0x080007b4   0x00000046   Code   RO          730    i.GPIO_PinAFConfig  .\output\stm32f4xx_gpio.o
+    0x080007fa   0x00000012   Code   RO          733    i.GPIO_ReadInputDataBit  .\output\stm32f4xx_gpio.o
+    0x0800080c   0x00000008   Code   RO          734    i.GPIO_ReadOutputData  .\output\stm32f4xx_gpio.o
+    0x08000814   0x00000004   Code   RO          740    i.GPIO_Write        .\output\stm32f4xx_gpio.o
+    0x08000818   0x00000004   Code   RO          267    i.HardFault_Handler  .\output\stm32f4xx_it.o
+    0x0800081c   0x00000004   Code   RO          268    i.MemManage_Handler  .\output\stm32f4xx_it.o
+    0x08000820   0x00000002   Code   RO          269    i.NMI_Handler       .\output\stm32f4xx_it.o
+    0x08000822   0x00000002   PAD
+    0x08000824   0x00000078   Code   RO          688    i.NVIC_Init         .\output\misc.o
+    0x0800089c   0x00000002   Code   RO          270    i.PendSV_Handler    .\output\stm32f4xx_it.o
+    0x0800089e   0x00000002   PAD
+    0x080008a0   0x00000020   Code   RO          412    i.RCC_AHB1PeriphClockCmd  .\output\stm32f4xx_rcc.o
+    0x080008c0   0x00000020   Code   RO          421    i.RCC_APB1PeriphClockCmd  .\output\stm32f4xx_rcc.o
+    0x080008e0   0x000000e8   Code   RO          433    i.RCC_GetClocksFreq  .\output\stm32f4xx_rcc.o
+    0x080009c8   0x0000003c   Code   RO         2104    i.SPI_Init          .\output\stm32f4xx_spi.o
+    0x08000a04   0x00000018   Code   RO         2107    i.SPI_StructInit    .\output\stm32f4xx_spi.o
+    0x08000a1c   0x00000002   Code   RO          271    i.SVC_Handler       .\output\stm32f4xx_it.o
+    0x08000a1e   0x00000002   PAD
+    0x08000a20   0x000000ec   Code   RO            2    i.SetSysClock       .\output\system_stm32f4xx.o
+    0x08000b0c   0x00000048   Code   RO          139    i.ShowDisplay       .\output\main.o
+    0x08000b54   0x000000b0   Code   RO         1402    i.SysTick_Handler   .\output\tm_stm32f4_delay.o
+    0x08000c04   0x0000005c   Code   RO            4    i.SystemInit        .\output\system_stm32f4xx.o
+    0x08000c60   0x00000014   Code   RO         1494    i.TM_ADC_INT_Channel_0_Init  .\output\tm_stm32f4_adc.o
+    0x08000c74   0x00000014   Code   RO         1495    i.TM_ADC_INT_Channel_10_Init  .\output\tm_stm32f4_adc.o
+    0x08000c88   0x00000014   Code   RO         1496    i.TM_ADC_INT_Channel_11_Init  .\output\tm_stm32f4_adc.o
+    0x08000c9c   0x00000014   Code   RO         1497    i.TM_ADC_INT_Channel_12_Init  .\output\tm_stm32f4_adc.o
+    0x08000cb0   0x00000014   Code   RO         1498    i.TM_ADC_INT_Channel_13_Init  .\output\tm_stm32f4_adc.o
+    0x08000cc4   0x0000003c   Code   RO         1499    i.TM_ADC_INT_Channel_14_Init  .\output\tm_stm32f4_adc.o
+    0x08000d00   0x00000040   Code   RO         1500    i.TM_ADC_INT_Channel_15_Init  .\output\tm_stm32f4_adc.o
+    0x08000d40   0x00000014   Code   RO         1501    i.TM_ADC_INT_Channel_1_Init  .\output\tm_stm32f4_adc.o
+    0x08000d54   0x00000014   Code   RO         1502    i.TM_ADC_INT_Channel_2_Init  .\output\tm_stm32f4_adc.o
+    0x08000d68   0x00000014   Code   RO         1503    i.TM_ADC_INT_Channel_3_Init  .\output\tm_stm32f4_adc.o
+    0x08000d7c   0x0000003c   Code   RO         1504    i.TM_ADC_INT_Channel_4_Init  .\output\tm_stm32f4_adc.o
+    0x08000db8   0x0000003c   Code   RO         1505    i.TM_ADC_INT_Channel_5_Init  .\output\tm_stm32f4_adc.o
+    0x08000df4   0x0000003c   Code   RO         1506    i.TM_ADC_INT_Channel_6_Init  .\output\tm_stm32f4_adc.o
+    0x08000e30   0x0000003c   Code   RO         1507    i.TM_ADC_INT_Channel_7_Init  .\output\tm_stm32f4_adc.o
+    0x08000e6c   0x0000003c   Code   RO         1508    i.TM_ADC_INT_Channel_8_Init  .\output\tm_stm32f4_adc.o
+    0x08000ea8   0x0000003c   Code   RO         1509    i.TM_ADC_INT_Channel_9_Init  .\output\tm_stm32f4_adc.o
+    0x08000ee4   0x0000001c   Code   RO         1510    i.TM_ADC_INT_InitPin  .\output\tm_stm32f4_adc.o
+    0x08000f00   0x000000cc   Code   RO         1511    i.TM_ADC_Init       .\output\tm_stm32f4_adc.o
+    0x08000fcc   0x000000a0   Code   RO         1512    i.TM_ADC_InitADC    .\output\tm_stm32f4_adc.o
+    0x0800106c   0x0000003a   Code   RO         1513    i.TM_ADC_Read       .\output\tm_stm32f4_adc.o
+    0x080010a6   0x00000002   PAD
+    0x080010a8   0x00000088   Code   RO         1405    i.TM_DELAY_Init     .\output\tm_stm32f4_delay.o
+    0x08001130   0x0000000e   Code   RO         1260    i.TM_GPIO_GetPortSource  .\output\tm_stm32f4_gpio.o
+    0x0800113e   0x00000002   PAD
+    0x08001140   0x00000020   Code   RO         1263    i.TM_GPIO_INT_EnableClock  .\output\tm_stm32f4_gpio.o
+    0x08001160   0x000000b0   Code   RO         1264    i.TM_GPIO_INT_Init  .\output\tm_stm32f4_gpio.o
+    0x08001210   0x00000030   Code   RO         1265    i.TM_GPIO_Init      .\output\tm_stm32f4_gpio.o
+    0x08001240   0x0000006e   Code   RO         1266    i.TM_GPIO_InitAlternate  .\output\tm_stm32f4_gpio.o
+    0x080012ae   0x00000012   Code   RO         1133    i.TM_HD44780_Clear  .\output\tm_stm32f4_hd44780.o
+    0x080012c0   0x00000020   Code   RO         1134    i.TM_HD44780_Cmd    .\output\tm_stm32f4_hd44780.o
+    0x080012e0   0x00000080   Code   RO         1135    i.TM_HD44780_Cmd4bit  .\output\tm_stm32f4_hd44780.o
+    0x08001360   0x00000038   Code   RO         1139    i.TM_HD44780_CursorSet  .\output\tm_stm32f4_hd44780.o
+    0x08001398   0x00000020   Code   RO         1140    i.TM_HD44780_Data   .\output\tm_stm32f4_hd44780.o
+    0x080013b8   0x00000020   Code   RO         1142    i.TM_HD44780_DisplayOn  .\output\tm_stm32f4_hd44780.o
+    0x080013d8   0x000000a4   Code   RO         1143    i.TM_HD44780_Init   .\output\tm_stm32f4_hd44780.o
+    0x0800147c   0x00000094   Code   RO         1144    i.TM_HD44780_InitPins  .\output\tm_stm32f4_hd44780.o
+    0x08001510   0x00000084   Code   RO         1146    i.TM_HD44780_Puts   .\output\tm_stm32f4_hd44780.o
+    0x08001594   0x00000094   Code   RO         1884    i.TM_LIS302DL_INT_ReadAxes  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001628   0x0000003c   Code   RO         1885    i.TM_LIS302DL_LIS3DSH_Detect  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001664   0x00000014   Code   RO         1886    i.TM_LIS302DL_LIS3DSH_INT_Delay  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001678   0x000000d4   Code   RO         1887    i.TM_LIS302DL_LIS3DSH_INT_InitLIS302DL  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x0800174c   0x000000b4   Code   RO         1888    i.TM_LIS302DL_LIS3DSH_INT_InitLIS3DSH  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001800   0x00000058   Code   RO         1889    i.TM_LIS302DL_LIS3DSH_INT_InitPins  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001858   0x00000040   Code   RO         1890    i.TM_LIS302DL_LIS3DSH_INT_ReadSPI  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001898   0x00000044   Code   RO         1891    i.TM_LIS302DL_LIS3DSH_INT_WriteSPI  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x080018dc   0x00000044   Code   RO         1892    i.TM_LIS302DL_LIS3DSH_Init  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001920   0x00000030   Code   RO         1893    i.TM_LIS302DL_LIS3DSH_ReadAxes  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001950   0x000000c8   Code   RO         1894    i.TM_LIS3DSH_INT_ReadAxes  .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001a18   0x0000004c   Code   RO         1980    i.TM_SPI1_INT_InitPins  .\output\tm_stm32f4_spi.o
+    0x08001a64   0x00000080   Code   RO         1981    i.TM_SPI2_INT_InitPins  .\output\tm_stm32f4_spi.o
+    0x08001ae4   0x00000050   Code   RO         1982    i.TM_SPI3_INT_InitPins  .\output\tm_stm32f4_spi.o
+    0x08001b34   0x00000068   Code   RO         1984    i.TM_SPI_Init       .\output\tm_stm32f4_spi.o
+    0x08001b9c   0x00000002   Code   RO         1985    i.TM_SPI_InitCustomPinsCallback  .\output\tm_stm32f4_spi.o
+    0x08001b9e   0x0000004e   Code   RO         1988    i.TM_SPI_ReadMulti  .\output\tm_stm32f4_spi.o
+    0x08001bec   0x00000042   Code   RO         1895    i.TM_SPI_Send       .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x08001c2e   0x0000004e   Code   RO         1993    i.TM_SPI_WriteMulti  .\output\tm_stm32f4_spi.o
+    0x08001c7c   0x00000104   Code   RO         1995    i.TM_SPIx_Init      .\output\tm_stm32f4_spi.o
+    0x08001d80   0x000000ac   Code   RO          140    i.USART3_Init       .\output\main.o
+    0x08001e2c   0x00000018   Code   RO          930    i.USART_Cmd         .\output\stm32f4xx_usart.o
+    0x08001e44   0x0000004a   Code   RO          936    i.USART_ITConfig    .\output\stm32f4xx_usart.o
+    0x08001e8e   0x00000002   PAD
+    0x08001e90   0x000000d4   Code   RO          937    i.USART_Init        .\output\stm32f4xx_usart.o
+    0x08001f64   0x00000008   Code   RO          947    i.USART_SendData    .\output\stm32f4xx_usart.o
+    0x08001f6c   0x00000034   Code   RO          141    i.USART_SendString  .\output\main.o
+    0x08001fa0   0x00000004   Code   RO          272    i.UsageFault_Handler  .\output\stm32f4xx_it.o
+    0x08001fa4   0x00000020   Code   RO         2296    i.__0printf$1       C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)
+    0x08001fc4   0x00000028   Code   RO         2298    i.__0sprintf$1      C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)
+    0x08001fec   0x0000000e   Code   RO         2605    i.__scatterload_copy  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x08001ffa   0x00000002   Code   RO         2606    i.__scatterload_null  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x08001ffc   0x0000000e   Code   RO         2607    i.__scatterload_zeroinit  C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)
+    0x0800200a   0x00000002   PAD
+    0x0800200c   0x00000154   Code   RO         2303    i._printf_core      C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)
+    0x08002160   0x0000000a   Code   RO         2305    i._sputc            C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)
+    0x0800216a   0x00000002   PAD
+    0x0800216c   0x0000005c   Code   RO         1116    i.binario           .\output\binario.o
+    0x080021c8   0x00000028   Code   RO          142    i.buttons_init      .\output\main.o
+    0x080021f0   0x00000040   Code   RO          143    i.display_init      .\output\main.o
+    0x08002230   0x00000044   Code   RO          326    i.fputc             .\output\fputc_debug.o
+    0x08002274   0x00000034   Code   RO          144    i.leds_init         .\output\main.o
+    0x080022a8   0x00000238   Code   RO          145    i.main              .\output\main.o
+    0x080024e0   0x00000022   Code   RO          146    i.map               .\output\main.o
+    0x08002502   0x00000002   PAD
+    0x08002504   0x00000018   Code   RO          147    i.shoot_button      .\output\main.o
+    0x0800251c   0x00000018   Code   RO          148    i.stabilizer_button  .\output\main.o
+    0x08002534   0x00000020   Data   RO         2603    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000510, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000014   Data   RW            5    .data               .\output\system_stm32f4xx.o
+    0x20000014   0x00000036   Data   RW          150    .data               .\output\main.o
+    0x2000004a   0x00000002   PAD
+    0x2000004c   0x00000008   Data   RW          328    .data               .\output\fputc_debug.o
+    0x20000054   0x00000010   Data   RW          456    .data               .\output\stm32f4xx_rcc.o
+    0x20000064   0x00000004   Data   RW         1117    .data               .\output\binario.o
+    0x20000068   0x00000007   Data   RW         1149    .data               .\output\tm_stm32f4_hd44780.o
+    0x2000006f   0x00000001   PAD
+    0x20000070   0x00000011   Data   RW         1414    .data               .\output\tm_stm32f4_delay.o
+    0x20000081   0x00000003   PAD
+    0x20000084   0x00000009   Data   RW         1896    .data               .\output\tm_stm32f4_lis302dl_lis3dsh.o
+    0x2000008d   0x00000003   PAD
+    0x20000090   0x00000050   Zero   RW          149    .bss                .\output\main.o
+    0x200000e0   0x00000016   Zero   RW         1273    .bss                .\output\tm_stm32f4_gpio.o
+    0x200000f6   0x00000002   PAD
+    0x200000f8   0x00000018   Zero   RW         1413    .bss                .\output\tm_stm32f4_delay.o
+    0x20000110   0x00000400   Zero   RW         1109    STACK               .\output\startup_stm32f4xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        92          8          0          4          0        622   .\output\binario.o
+        68          8          0          8          0      21113   .\output\fputc_debug.o
+      1162        132          0         54         80      20415   .\output\main.o
+       120         14          0          0          0       1344   .\output\misc.o
+        36          8        392          0       1024        972   .\output\startup_stm32f4xx.o
+       316         24          0          0          0       3827   .\output\stm32f4xx_adc.o
+       244          0          0          0          0       4326   .\output\stm32f4xx_gpio.o
+        24          0          0          0          0       3432   .\output\stm32f4xx_it.o
+       296         30          0         16          0       4438   .\output\stm32f4xx_rcc.o
+        84          0          0          0          0       2172   .\output\stm32f4xx_spi.o
+       318          8          0          0          0       4143   .\output\stm32f4xx_usart.o
+       328         34          0         20          0     263857   .\output\system_stm32f4xx.o
+      1094        226          0          0          0      12392   .\output\tm_stm32f4_adc.o
+       312         38          0         17         24      21641   .\output\tm_stm32f4_delay.o
+       380         10          0          0         22       4268   .\output\tm_stm32f4_gpio.o
+       766         50          0          7          0       8626   .\output\tm_stm32f4_hd44780.o
+      1222        100          0          9          0      11805   .\output\tm_stm32f4_lis302dl_lis3dsh.o
+       806         70          0          0          0       5918   .\output\tm_stm32f4_spi.o
+
+    ----------------------------------------------------------------------
+      7684        760        424        144       1152     395311   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        16          0          0          9          2          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry.o)
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry10a.o)
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry11a.o)
+         8          4          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry2.o)
+         4          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry5.o)
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry7b.o)
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry8b.o)
+         8          4          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(entry9a.o)
+        30          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(handlers.o)
+        36          8          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(init.o)
+         0          0          0          0          0          0   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(iusefp.o)
+        30          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llshl.o)
+        32          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(llushr.o)
+       422         20          0          0          0        336   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(printf1.o)
+        24          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strcat.o)
+        14          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(strlen.o)
+        44          0          0          0          0         80   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l(uidiv.o)
+       186          0          0          0          0        176   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(depilogue.o)
+        62          0          0          0          0         80   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dfixi.o)
+        34          0          0          0          0         76   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dflti.o)
+       228          0          0          0          0         96   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(dmul.o)
+       110          0          0          0          0        168   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fepilogue.o)
+        50          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(ffixi.o)
+        18          0          0          0          0         68   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fflti.o)
+       100          0          0          0          0         76   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l(fmul.o)
+
+    ----------------------------------------------------------------------
+      1448         36          0          0          0       1564   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       652         36          0          0          0        756   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mc_w.l
+       788          0          0          0          0        808   C:\Keil_v5\ARM\ARMCC\Bin\..\lib\armlib\mf_w.l
+
+    ----------------------------------------------------------------------
+      1448         36          0          0          0       1564   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      9132        796        424        144       1152     391307   Grand Totals
+      9132        796        424        144       1152     391307   ELF Image Totals
+      9132        796        424        144          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 9556 (   9.33kB)
+    Total RW  Size (RW Data + ZI Data)              1296 (   1.27kB)
+    Total ROM Size (Code + RO Data + RW Data)       9700 (   9.47kB)
+
+==============================================================================
+
