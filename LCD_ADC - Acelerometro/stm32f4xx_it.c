@@ -23,6 +23,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
+#include "tm_stm32f4_delay.h"
+
+extern void TM_Config_SysTick_Handler(void); //Funcion tercera
+
+extern volatile uint16_t count_system;
+extern volatile uint16_t count_lcd;
 
 /** @addtogroup STM32F4_Discovery_Peripheral_Examples
   * @{
@@ -137,11 +143,18 @@ void PendSV_Handler(void)
   * @retval None
   */
 
-/*
+
+
 void SysTick_Handler(void)
 {                         //INTERRUPCION DESHABILITADA POR ROBERT
+
+	TM_Config_SysTick_Handler(); //TERCEROS: Configuracion para el delay que usa la libreria del LCD
+	
+	count_system++; //Contador para el delay nuestro
+	count_lcd++; //Contador para el plot de lcd
+
 }
-*/
+
 
 /******************************************************************************/
 /*                 STM32F4xx Peripherals Interrupt Handlers                   */

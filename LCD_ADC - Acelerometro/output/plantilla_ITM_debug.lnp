@@ -21,6 +21,7 @@
 ".\output\tm_stm32f4_lis302dl_lis3dsh.o"
 ".\output\tm_stm32f4_spi.o"
 ".\output\stm32f4xx_spi.o"
+".\output\hyperion.o"
 --library_type=microlib --strict --scatter ".\output\plantilla_ITM_debug.sct"
 --show_full_path --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -38,11 +38,12 @@
 .\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\output\main.o: ..\terceros\binario\binario.h
 .\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\output\main.o: ..\terceros\lcd\tm_stm32f4_delay.h
+.\output\main.o: ..\terceros\hyperion\hyperion.h
+.\output\main.o: ..\terceros\lcd\tm_stm32f4_hd44780.h
 .\output\main.o: ..\terceros\lcd\defines.h
+.\output\main.o: ..\terceros\lcd\tm_stm32f4_delay.h
 .\output\main.o: ..\terceros\lcd\attributes.h
 .\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\output\main.o: ..\terceros\lcd\tm_stm32f4_hd44780.h
 .\output\main.o: ..\terceros\lcd\tm_stm32f4_gpio.h
 .\output\main.o: ..\terceros\adc\tm_stm32f4_adc.h
 .\output\main.o: ..\terceros\adc\defines.h

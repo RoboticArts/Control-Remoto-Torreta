@@ -35,3 +35,7 @@
 .\output\stm32f4xx_it.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
 .\output\stm32f4xx_it.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\output\stm32f4xx_it.o: ..\terceros\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h
+.\output\stm32f4xx_it.o: ..\terceros\lcd\tm_stm32f4_delay.h
+.\output\stm32f4xx_it.o: ..\terceros\lcd\defines.h
+.\output\stm32f4xx_it.o: ..\terceros\lcd\attributes.h
+.\output\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
